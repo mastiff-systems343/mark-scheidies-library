@@ -60,17 +60,16 @@ pre.highlight code,
 }
 
 .content-wrapper__inner {
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 
   iframe {
-      border: none;
-      width: 100%; // Full width for the viewport
-      height: 100vh; // Adjust height to ensure good visibility
-      max-width: 800px;
-      max-height: 600px;
-      margin: 10px;
-      display: block;
+    border: none;
+    width: 65vw;
+    height: 74vh;
+    padding: 50px 0;
   }
 
   // Media query for a specific mobile screen size
