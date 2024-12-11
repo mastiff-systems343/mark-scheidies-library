@@ -66,7 +66,7 @@ pre.highlight code,
   iframe {
       border: none;
       width: 100%; // Full width for the viewport
-      height: 90vh; // Adjust height to ensure good visibility
+      height: 100vh; // Adjust height to ensure good visibility
       max-width: 800px;
       max-height: 600px;
       margin: 20px auto;
@@ -77,7 +77,7 @@ pre.highlight code,
   @media (max-width: 321px) and (max-height: 972px) {
       iframe {
           width: 90%; // Slightly reduce the width for better fit
-          height: 90vh; // Adjust height for better aspect ratio
+          height: 100vh; // Adjust height for better aspect ratio
           margin: 10px auto; // Reduce margins for tighter space
       }
   }
