@@ -10,13 +10,26 @@ permalink: /r-rated/
         padding: 0;
         height: 100%;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9f9f9; /* Optional: Add a subtle background color */
     }
 
     iframe {
         border: none;
-        width: 65vw;
-        height: 74vh;
-        padding: 50px 0;
+        width: 90vw; /* Use more width for smaller screens */
+        height: 60vh; /* Adjust the height to fit smaller screens */
+        max-width: 800px; /* Set a maximum width for larger screens */
+        max-height: 600px; /* Set a maximum height for larger screens */
+        margin: 20px 0; /* Add spacing for better mobile view */
+    }
+
+    @media (min-width: 768px) {
+        iframe {
+            width: 65vw;
+            height: 74vh;
+        }
     }
 </style>
 
