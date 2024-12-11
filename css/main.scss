@@ -58,3 +58,26 @@ pre.highlight code,
   border: 3px solid #fff;
   border-radius:100%;
 }
+
+.content-wrapper__inner {
+  margin-right: 0;
+  margin-left: 0;
+
+  iframe {
+      border: none;
+      width: 100%; // Full width for mobile screens
+      height: 50vh; // Adjust height to ensure good visibility
+      max-width: 800px; // Prevent it from becoming too wide on larger screens
+      max-height: 600px; // Prevent it from becoming too tall
+      margin: 20px auto; // Center the iframe and add space above and below
+      display: block; // Ensure proper centering behavior
+  }
+
+  // Media query for larger screens
+  @media (min-width: 768px) {
+      iframe {
+          width: 70vw; // Reduce width on larger screens
+          height: 75vh; // Increase height for better use of space
+      }
+  }
+}
