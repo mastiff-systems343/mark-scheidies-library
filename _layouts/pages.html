@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-    <style>
-      body {
-        background-color: black;
-      }
-    </style>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?{{site.time | date: '%s%N'}}">
-  </head>
+<html>
+  <style>
+    body {
+      background-color: black;
+    }
+  </style>
+  {% include head.html %}
+
   <body>
     <div class="content">
-      {{ content }}
+        {{ content }}
     </div>
   </body>
 </html>
