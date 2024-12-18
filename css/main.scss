@@ -63,14 +63,15 @@ pre.highlight code,
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  width: 1577px;
+  height: 929px;
+  
 }
 
 iframe {
   border: none;
-  width: 1577px;
-  height: 929px;
+  height: 100%;
+  width: 100%;
   padding: 50px 0;
 }
 
