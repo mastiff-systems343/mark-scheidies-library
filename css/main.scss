@@ -59,19 +59,65 @@ pre.highlight code,
   border-radius:100%;
 }
 
-.content {
+.navigation__item {
+  @media (max-width: 768px) {
+  .navigation__item {
+    display: block; /* Stack the navigation items vertically on mobile */
+    margin: 10px 0; /* Add some margin between items */
+  }
+
+  .navigation__item a {
+    text-align: center; /* Center-align text inside the links */
+    padding: 10px 0; /* Add some padding to the links for better tap targets */
+    font-size: 16px; /* Optionally adjust font size for smaller screens */
+  }
+}
+
+/* Media query for screens with max-width of 430px */
+@media (max-width: 430px) {
+  .navigation__item {
+    display: block;   /* Stack items vertically */
+    margin: 18px 0;   /* Add more space between items */
+    width: 90%;  
+  }
+
+  .navigation__item a {
+    padding: 16px 0;  /* Increase padding for larger clickable area */
+    font-size: 14px;  /* Decrease font size for small screens */
+    width: 90%;  
+  }
+}
+}
+
+.content-wrapper {
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+.content-wrapper__inner {
   display: flex;             /* Use flexbox to center content */
   justify-content: center;   /* Center content horizontally */
-  align-items: center;       /* Center content vertically */
+  align-items: left;       /* Center content vertically */
   height: 100%;              /* Make sure it takes up the full height */
   width: 100%;               /* Ensure full width */
   flex-direction: column;    /* Align content vertically within wrapper */
+  padding: 0;
+  margin-left: 0;
+  margin-top: 10%;
+  margin-right: 0;
 }
 
 iframe {
   border: none;
-  height: 750px;
-  width: 1920px;
+  height: 700px;
+  width: 1400px;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  margin-left: 10%;
 }
 
 .media {
@@ -82,32 +128,45 @@ iframe {
 
   // Media query for mobile devices
   @media (max-width: 768px) {
+
     iframe {
-      width: 90vw;         /* Adjust width for smaller screens */
-      height: 60vh;        /* Adjust height for better fit */
-      padding: 20px 0;     /* Reduce padding */
+      width: 100vw;         /* Adjust width for smaller screens */
+      height: 70vh;        /* Adjust height for better fit */
+      padding: 0;     /* Reduce padding */
+      margin: 0;
     }
 
     .media {
       width: 90%;          /* Adjust media width for mobile */
       margin-top: 15px;    /* Adjust space for mobile view */
     }
+
+    p{
+      align-items: center;
+      margin-left: 30%;
+    }
   }
 
   // Media query for very small devices (e.g., 321px width)
-  @media (max-width: 321px) {
+  @media (max-width: 430px) {
+
     iframe {
-      width: 100%;         /* Full width for very small screens */
-      height: 50vh;        /* Reduce height */
-      padding: 10px 0;     /* Further reduce padding */
+      width: 100vw;         /* Adjust width for smaller screens */
+      height: 70vh;        /* Adjust height for better fit */
+      padding: 0;     /* Reduce padding */
+      margin: 0;
     }
 
     .media {
-      width: 100%;         /* Full width for very small screens */
-      margin-top: 10px;    /* Adjust space for very small devices */
+      width: 90%;          /* Adjust media width for mobile */
+      margin-top: 15px;    /* Adjust space for mobile view */
+    }
+
+    p{
+      align-items: center;
+      margin-left: 30%;
     }
   }
-
 
 
 
