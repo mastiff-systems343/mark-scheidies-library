@@ -70,15 +70,15 @@ pre.highlight code,
 
   iframe {
     border: none;
-    width: 65vw;
-    height: 74vh;
+    width: 1577px;
+    height: 929px;
     padding: 50px 0;
   }
 
   // Media query for mobile devices
   @media (max-width: 768px) {
     iframe {
-      width: 90vw; // Increase iframe width for smaller screens
+      width: 90vw; // Adjust width for smaller screens
       height: 60vh; // Adjust height to fit better on mobile
       padding: 20px 0; // Reduce padding for tighter layouts
     }
