@@ -63,32 +63,32 @@ pre.highlight code,
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-iframe {
-  border: none;
-  height: 100%;
-  width: 100%;
-  padding: 50px 0;
-}
-
-  // Media query for mobile devices
-  @media (max-width: 768px) {
-    iframe {
-      width: 90vw; // Adjust width for smaller screens
-      height: 60vh; // Adjust height to fit better on mobile
-      padding: 20px 0; // Reduce padding for tighter layouts
-    }
+  iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
   }
-
-  // Media query for very small devices (e.g., 321px width)
-  @media (max-width: 321px) {
-    iframe {
-      width: 100%; // Full width for very small screens
-      height: 50vh; // Reduce height for tighter screens
-      padding: 10px 0; // Further reduce padding
+  
+    // Media query for mobile devices
+    @media (max-width: 768px) {
+      iframe {
+        width: 90vw; // Adjust width for smaller screens
+        height: 60vh; // Adjust height to fit better on mobile
+        padding: 20px 0; // Reduce padding for tighter layouts
+      }
     }
-  }
+  
+    // Media query for very small devices (e.g., 321px width)
+    @media (max-width: 321px) {
+      iframe {
+        width: 100%; // Full width for very small screens
+        height: 50vh; // Reduce height for tighter screens
+        padding: 10px 0; // Further reduce padding
+      }
+    }
 }
+
 
 
