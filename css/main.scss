@@ -60,20 +60,19 @@ pre.highlight code,
 }
 
 .content-wrapper {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+}
 
-  iframe {
-    border: none;
-    width: 1577px;
-    height: 929px;
-    padding: 50px 0;
-  }
+iframe {
+  border: none;
+  width: 1577px;
+  height: 929px;
+  padding: 50px 0;
+}
 
   // Media query for mobile devices
   @media (max-width: 768px) {
