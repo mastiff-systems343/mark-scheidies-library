@@ -4,12 +4,48 @@
     body {
       background-color: black;
     }
+
+    iframe {
+  border: none;
+  height: 750px;
+  width: 1920px;
+}
+
+.media {
+  margin-top: 20px; /* Add space between iframe and media content */
+  width: 90%;       /* Adjust the width of the media content */
+  max-width: 1300px; /* Ensure media doesn't exceed iframe width */
+}
+
+  // Media query for mobile devices
+  @media (max-width: 768px) {
+    iframe {
+      width: 90vw;         /* Adjust width for smaller screens */
+      height: 60vh;        /* Adjust height for better fit */
+      padding: 20px 0;     /* Reduce padding */
+    }
+
+    .media {
+      width: 90%;          /* Adjust media width for mobile */
+      margin-top: 15px;    /* Adjust space for mobile view */
+    }
+  }
+
+  // Media query for very small devices (e.g., 321px width)
+  @media (max-width: 321px) {
+    iframe {
+      width: 100%;         /* Full width for very small screens */
+      height: 50vh;        /* Reduce height */
+      padding: 10px 0;     /* Further reduce padding */
+    }
+
+    .media {
+      width: 100%;         /* Full width for very small screens */
+      margin-top: 10px;    /* Adjust space for very small devices */
+    }
   </style>
-  {% include head.html %}
 
   <body>
-    <div class="content-wrapper">
         {{ content }}
-    </div>
   </body>
 </html>
