@@ -60,33 +60,37 @@ pre.highlight code,
 }
 
 .content-wrapper {
-  justify-content: center;
-  align-items: center;
+  display: flex;            /* Use flexbox to center content */
+  justify-content: center;  /* Center content horizontally */
+  align-items: center;      /* Center content vertically */
+  height: 100%;             /* Make sure it takes up the full height */
+  width: 100%;              /* Ensure full width */
+}
 
-  iframe {
-    border: none;
-    height: 850px;
-    width: 1300px;
-    padding: 50px 0;
+iframe {
+  border: none;
+  height: 850px;
+  width: 1300px;
+  padding: 50px 0;
+}
+
+  // Media query for mobile devices
+  @media (max-width: 768px) {
+    iframe {
+      width: 90vw;         /* Adjust width for smaller screens */
+      height: 60vh;        /* Adjust height for better fit */
+      padding: 20px 0;     /* Reduce padding */
+    }
   }
-  
-    // Media query for mobile devices
-    @media (max-width: 768px) {
-      iframe {
-        width: 90vw; // Adjust width for smaller screens
-        height: 60vh; // Adjust height to fit better on mobile
-        padding: 20px 0; // Reduce padding for tighter layouts
-      }
+
+  // Media query for very small devices (e.g., 321px width)
+  @media (max-width: 321px) {
+    iframe {
+      width: 100%;         /* Full width for very small screens */
+      height: 50vh;        /* Reduce height */
+      padding: 10px 0;     /* Further reduce padding */
     }
-  
-    // Media query for very small devices (e.g., 321px width)
-    @media (max-width: 321px) {
-      iframe {
-        width: 100%; // Full width for very small screens
-        height: 50vh; // Reduce height for tighter screens
-        padding: 10px 0; // Further reduce padding
-      }
-    }
+  }
 }
 
 
