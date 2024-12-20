@@ -95,35 +95,46 @@ pre.highlight code,
   }
 }
 
+/* Ensure the content wrapper doesn't exceed the viewport */
 .content-wrapper__inner {
-  display: flex;             /* Use flexbox to center content */
-  justify-content: center;   /* Center content horizontally */
-  align-items: left;       /* Center content vertically */
-  height: 100%;              /* Make sure it takes up the full height */
-  width: 100%;               /* Ensure full width */
-  flex-direction: column;    /* Align content vertically within wrapper */
+  display: flex;
+  justify-content: flex-start;  /* Align content to the left */
+  align-items: center;          /* Center content vertically */
+  height: 100vh;                /* Take up full viewport height */
+  width: calc(100vw - 550px);   /* Subtract sidebar width (460px) from the total width */
+  flex-direction: column;       /* Align content vertically */
   padding: 0;
-  margin-left: 0;
-  margin-top: 10%;
-  margin-right: 0;
+  margin: 0;
+  box-sizing: border-box;       /* Include padding and border in the element's total width/height */
 }
 
+/* Make sure the iframe adjusts within the container */
 iframe {
   border: none;
-  height: 700px;
-  width: 1400px;
+  height: 100%;                  /* Ensure iframe takes up full height of its parent container */
+  width: 100%;                   /* Ensure iframe takes up full width of its parent container */
+  max-width: 100%;               /* Ensure iframe doesn't exceed container width */
+  max-height: 100vh;             /* Ensure iframe doesn't exceed the viewport height */
   margin: 0;
-  padding: 0;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  box-sizing: border-box;        /* Prevent padding/border from affecting width/height */
 }
 
 p{
-  margin-left: 10%;
+  padding-left: 0;
 }
 
-.media {
-  margin-top: 20px; /* Add space between iframe and media content */
-  width: 90%;       /* Adjust the width of the media content */
-  max-width: 1300px; /* Ensure media doesn't exceed iframe width */
+/* For smaller screens (optional) */
+@media (max-width: 768px) {
+  .content-wrapper__inner {
+    width: 100vw;                /* Full width for smaller screens */
+  }
+  
+  iframe {
+    height: 100vh;               /* Make iframe fill the screen height on small devices */
+    width: 100vw;                /* Ensure full width */
+  }
 }
 
   // Media query for mobile devices

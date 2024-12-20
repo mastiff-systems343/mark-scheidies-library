@@ -1,7 +1,7 @@
 ---
 layout: pages
-title: Family Reads
-permalink: /family-reads/
+title: Family
+permalink: /family/
 ---
 
 <iframe src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1ZedJ_T21wlITV0RjbYnwAUrSuo2duTmeN1WExGTzOgc&font=Default&lang=en&initial_zoom=10&height=650" allowfullscreen></iframe>
